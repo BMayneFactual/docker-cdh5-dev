@@ -44,12 +44,6 @@ RUN chmod 755 /bin/drake
 RUN apt-get purge -y manpages manpages-dev man-db
 RUN apt-get install -y manpages manpages-dev man-db
 
-#sbt
-RUN echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
-RUN sudo apt-get update
-RUN sudo apt-get install -y sbt
-
 #spark
 RUN apt-get update && apt-get -y install curl wget cronolog
 RUN wget -O /usr/local/spark-1.6.1-bin-hadoop2.6.tgz http://apache.claz.org/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz
