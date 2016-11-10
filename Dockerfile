@@ -46,7 +46,7 @@ RUN apt-get install -y manpages manpages-dev man-db
 
 #spark
 RUN apt-get update && apt-get -y install curl wget cronolog
-RUN wget -O /usr/local/spark-1.6.1-bin-hadoop2.6.tgz http://apache.claz.org/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz
+RUN wget -O /usr/local/spark-1.6.1-bin-hadoop2.6.tgz http://d3kbcqa49mib13.cloudfront.net/spark-1.6.1-bin-hadoop2.6.tgz
 RUN tar -xzf /usr/local/spark-1.6.1-bin-hadoop2.6.tgz -C /usr/local/
 RUN rm /usr/local/spark-1.6.1-bin-hadoop2.6.tgz
 ENV PATH=/usr/local/spark-1.6.1-bin-hadoop2.6/bin:$PATH
