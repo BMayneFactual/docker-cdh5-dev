@@ -3,6 +3,7 @@ FROM factual/docker-cdh5-dev
 ENV SPARK_VERSION=2.1.0-bin-hadoop2.6
 
 #Spark
+RUN rm -r /opt/spark
 ADD http://d3kbcqa49mib13.cloudfront.net/spark-$SPARK_VERSION.tgz /tmp/
 RUN cd /tmp/ && tar xzf spark-$SPARK_VERSION.tgz && mv spark-$SPARK_VERSION $SPARK_HOME
 RUN echo "export PATH=$SPARK_HOME/bin:\$PATH" >> /etc/profile
