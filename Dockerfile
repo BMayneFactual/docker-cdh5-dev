@@ -10,7 +10,7 @@ RUN echo "export HADOOP_CONF_DIR=$HADOOP_CONF_DIR" >> /etc/profile
 RUN echo "export SPARK_HOME=$SPARK_HOME" >> /etc/profile
 RUN mkdir -p /etc/spark/ && ln -s $SPARK_HOME/conf /etc/spark/conf
 
-ENV PATH=$SPARK_PATH/bin:$PATH
+ENV PATH=$SPARK_HOME/bin:$PATH
 RUN apt-get update && apt-get -y install curl wget cronolog
 ADD spark-defaults.conf /opt/spark/conf/
 
