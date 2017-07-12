@@ -1,6 +1,6 @@
 FROM factual/docker-cdh5-dev
 
-ENV SPARK_VERSION=2.1.0-bin-hadoop2.6
+ENV SPARK_VERSION=2.2.0-bin-hadoop2.6
 
 #Spark
 RUN rm -r /opt/spark
